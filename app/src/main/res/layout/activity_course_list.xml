@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CourseListActivity">
+
+    <ListView
+        android:id="@+id/course_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp" />
+
+    TextView totalGpaTextView = findViewById(R.id.total_gpa);
+    double totalGpa = calculateTotalGpa(courses); // Assuming you have a method to calculate the GPA
+    totalGpaTextView.setText(String.format(Locale.US, "Total GPA: %.2f", totalGpa));
+
+    <activity
+        android:name=".CourseListActivity"
+        android:label="Course List"
+        android:parentActivityName=".ProfileActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".ProfileActivity" />
+    </activity>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
